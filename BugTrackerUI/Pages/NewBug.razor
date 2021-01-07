@@ -1,5 +1,4 @@
 ﻿@page "/new-bug"
-@inject IBugService BugService
 
 <h3>Add New Bug</h3>
 
@@ -14,11 +13,14 @@
 
     public Bug AddBug { get; set; } = new Bug();
 
-    [Inject]
+    //[Inject]
+    public IBugService BugService;
+
+    //[Inject]
     public NavigationManager NavService;
 
     protected void HandleValidSubmit()
     {
-       // AddBug();
+        // AddBug();
     }
 }
